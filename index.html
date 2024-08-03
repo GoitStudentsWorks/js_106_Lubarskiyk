@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/js_106_Lubarskiyk/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <script type="module" crossorigin src="/js_106_Lubarskiyk/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/js_106_Lubarskiyk/assets/vendor-ySSAwJ0G.js">
+    <link rel="stylesheet" crossorigin href="/js_106_Lubarskiyk/assets/vendor-DnveWo0P.css">
+    <link rel="stylesheet" crossorigin href="/js_106_Lubarskiyk/assets/index-CgixDYNu.css">
+    <style>@font-face{font-family:'Inter Tight';font-style:normal;font-weight:500;font-display:swap;src:url(/js_106_Lubarskiyk/assets/NGSwv5HMAFg6IuGlBNMjxLsK8ah8QA-CE3EbjzZ.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Inter Tight';font-style:normal;font-weight:500;font-display:swap;src:url(/js_106_Lubarskiyk/assets/NGSwv5HMAFg6IuGlBNMjxLsD8ah8QA-x48QYbAL.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Inter Tight';font-style:normal;font-weight:500;font-display:swap;src:url(/js_106_Lubarskiyk/assets/NGSwv5HMAFg6IuGlBNMjxLsL8ah8QA-pNDv5Qab.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Inter Tight';font-style:normal;font-weight:500;font-display:swap;src:url(/js_106_Lubarskiyk/assets/NGSwv5HMAFg6IuGlBNMjxLsE8ah8QA-B1lUOBKV.woff2) format('woff2');unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}@font-face{font-family:'Inter Tight';font-style:normal;font-weight:500;font-display:swap;src:url(/js_106_Lubarskiyk/assets/NGSwv5HMAFg6IuGlBNMjxLsI8ah8QA-CxflIBSm.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Inter Tight';font-style:normal;font-weight:500;font-display:swap;src:url(/js_106_Lubarskiyk/assets/NGSwv5HMAFg6IuGlBNMjxLsJ8ah8QA-C5hsmzEi.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Inter Tight';font-style:normal;font-weight:500;font-display:swap;src:url(/js_106_Lubarskiyk/assets/NGSwv5HMAFg6IuGlBNMjxLsH8ag-CbfoEWwi.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Inter Tight';font-style:normal;font-weight:600;font-display:swap;src:url(/js_106_Lubarskiyk/assets/NGSwv5HMAFg6IuGlBNMjxLsK8ah8QA-CE3EbjzZ.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Inter Tight';font-style:normal;font-weight:600;font-display:swap;src:url(/js_106_Lubarskiyk/assets/NGSwv5HMAFg6IuGlBNMjxLsD8ah8QA-x48QYbAL.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Inter Tight';font-style:normal;font-weight:600;font-display:swap;src:url(/js_106_Lubarskiyk/assets/NGSwv5HMAFg6IuGlBNMjxLsL8ah8QA-pNDv5Qab.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Inter Tight';font-style:normal;font-weight:600;font-display:swap;src:url(/js_106_Lubarskiyk/assets/NGSwv5HMAFg6IuGlBNMjxLsE8ah8QA-B1lUOBKV.woff2) format('woff2');unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}@font-face{font-family:'Inter Tight';font-style:normal;font-weight:600;font-display:swap;src:url(/js_106_Lubarskiyk/assets/NGSwv5HMAFg6IuGlBNMjxLsI8ah8QA-CxflIBSm.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Inter Tight';font-style:normal;font-weight:600;font-display:swap;src:url(/js_106_Lubarskiyk/assets/NGSwv5HMAFg6IuGlBNMjxLsJ8ah8QA-C5hsmzEi.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Inter Tight';font-style:normal;font-weight:600;font-display:swap;src:url(/js_106_Lubarskiyk/assets/NGSwv5HMAFg6IuGlBNMjxLsH8ag-CbfoEWwi.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style>
+  </head>
+  <body>
+    <header class="header">
+  <div class="container">
+    <div class="header-container">
+      <div class="logo-wrapper">
+        <a href="./index.html" class="image-wrapper">
+          <img src="/js_106_Lubarskiyk/assets/image-B9U0Z5F9.png" alt="logo" width="80" height="80" />
+          <p class="logo-text">jefferson*</p>
+        </a>
+      </div>
+
+      <div class="nav-menu">
+        <button type="button" class="menu-word">Menu</button>
+        <nav>
+          <ul class="custom-list">
+            <li class="menu-list-item" aria-label="Go to section About me">
+              <a href="#aboutme-section">About me</a>
+            </li>
+            <li class="menu-list-item">
+              <a href="#benefits-section" aria-label="Go to section Benefits">Benefits</a>
+            </li>
+            <li class="menu-list-item">
+              <a href="#projects-section" aria-label="Go to section Projects">Projects</a>
+            </li>
+            <li class="menu-list-item" aria-label="Go to section FAQ">
+              <a href="#faq-section">FAQ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!--  -->
+      <div class="two-btn-wrapper">
+        <button type="button" class="change-theme">Themes</button>
+
+        <button type="button" data-modal-open class="order-btn">Order the project</button>
+      </div>
+
+      <button class="open-burger" tabindex="-1" aria-label="open modal window">
+        <svg class="burger-icon" width="21" height="8.7">
+          <use href="/js_106_Lubarskiyk/assets/header-svg-cr5AyOT8.svg#icon-burger"></use>
+        </svg>
+      </button>
+
+      <!--Modal window  -->
+      <!-- is-open добавить ниже -->
+      <div class="modal-overlay">
+        <div class="modal">
+          <div class="js_image_modal"></div>
+          <nav class="navigation-modal">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a
+                  href="#aboutme-section"
+                  class="modal-text"
+                  tabindex="-1"
+                  aria-label="Go to section About me"
+                >About me</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#benefits-section"
+                  class="modal-text"
+                  tabindex="-1"
+                  aria-label="Go to section Benefits"
+                >Benefits</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#projects-section"
+                  class="modal-text"
+                  tabindex="-1"
+                  aria-label="Go to section Project"
+                >Projects</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#faq-section"
+                  class="modal-text"
+                  tabindex="-1"
+                  aria-label="Go to section FAQ"
+                >FAQ</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <a
+            tabindex="-1"
+            href="#work-together"
+            class="modal-link-to-footer order-mobile"
+            aria-label="Go to section Work together"
+          >Order the project
+          </a>
+        </div>
+        <button type="button" tabindex="-1" class="close-btn" aria-label="close modal window">
+          <svg width="28" height="28" class="modal-close-btn">
+            <use href="/js_106_Lubarskiyk/assets/header-svg-cr5AyOT8.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="changecolor">
+    <div class="menu">
+      <ul class="js_menu_changecolor">
+        <li class="menu-item">
+          <button
+            type="button"
+            class="theme_button"
+            aria-label="red theme"
+            tabindex="-1"
+            data-id
+          ></button>
+        </li>
+        <li class="menu-item">
+          <button
+            type="button"
+            class="theme_button"
+            aria-label="green theme"
+            tabindex="-1"
+            data-id
+          ></button>
+        </li>
+        <li class="menu-item">
+          <button
+            type="button"
+            class="theme_button"
+            aria-label="blue theme"
+            tabindex="-1"
+            data-id
+          ></button>
+        </li>
+        <li class="menu-item">
+          <button
+            type="button"
+            class="theme_button"
+            aria-label="ligthred theme"
+            tabindex="-1"
+            data-id
+          ></button>
+        </li>
+        <li class="menu-item">
+          <button
+            type="button"
+            class="theme_button"
+            aria-label="iceberg theme"
+            tabindex="-1"
+            data-id
+          ></button>
+        </li>
+        <li class="menu-item">
+          <button
+            type="button"
+            class="theme_button"
+            aria-label="orange theme"
+            tabindex="-1"
+            data-id
+          ></button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <main class="main">
+      <section class="hero ">
+  <div class="container hero_container">
+    <div class="js_image"></div>
+    <h1 class="headline1">
+      Hello.<br />
+      I’m Fullstack developer Lloyd Jefferson.
+    </h1>
+    <ul class="social_media">
+      <li class="social_item">
+        <a href="https://www.instagram.com/goitclub/" class="social_link" target="_blank">IG</a>
+      </li>
+      <li class="social_item">
+        <a href="https://www.facebook.com/goITclub/" class="social_link" target="_blank">FB</a>
+      </li>
+      <li class="social_item">
+        <a href="https://www.youtube.com/c/GoIT" class="social_link" target="_blank">YT</a>
+      </li>
+      <li class="social_item"><a href="https://github.com/Lubarskiyk/project-02" class="social_link"
+                                 target="_blank">GH</a></li>
+      <li class="social_item"><a href="mailto:lloydjefferson@gmail.com" class="social_link">lloydjefferson@gmail.com</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="developer-card" id="aboutme-section">
+  <h2 class="visually-hidden">About me</h2>
+  <div class="container developer-card-container">
+    <div class="developer-text-item">
+      <p class="developer-card-text">
+        I work with people all over the world to create impressive and
+        <span class="span-text-red">functional</span>
+        <span class="span-text-grey">websites</span> that reflect each client's unique personality.
+      </p>
+    </div>
+    <div class="developer-card-item js-dev-foto"></div>
+  </div>
+
+</section>
+
+      <section class="aboutme">
+  <div class="container">
+    <ul id="accordion" class="accordion-container">
+      <li class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger" aria-label="about me button acc">
+            About me
+            <span class="svg-wrap">
+              <svg class="icon" width="20" height="20">
+                <use href="/js_106_Lubarskiyk/assets/icons-CjiVfnSs.svg#icon-up"></use>
+              </svg>
+            </span>
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <ul class="about-me-list">
+            <li class="about-me-item">
+              <p class="ac-text ac-text-1">
+                I am Lloyd Jefferson, a talented programmer with extensive expertise in software
+                development. I have an understanding of different programming languages ​​and
+                technologies, always ready to improve my skills. I always follow the latest trends
+                and look for unconventional, creative solutions to problems. I have a high level of
+                analytical skills and am able to effectively solve even the most difficult tasks
+                encountered on the way.
+              </p>
+              <p class="ac-text">
+                Able to work both independently and in a team. I can effectively cooperate with
+                colleagues, exchanging ideas and finding optimal solutions. Professional maturity
+                allows you to calmly cope with challenges and stressful situations, while
+                maintaining a high quality of work. I am always looking for opportunities for
+                self-improvement. I actively study new technologies and practices to stay abreast of
+                the latest innovations. I have a strong understanding of various programming
+                languages, frameworks and architectural concepts that allow me to create efficient
+                and scalable software.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger" aria-label="role button acc">
+            ROLE
+            <span class="svg-wrap">
+              <svg class="icon" width="20" height="20">
+                <use href="/js_106_Lubarskiyk/assets/icons-CjiVfnSs.svg#icon-up"></use>
+              </svg>
+            </span>
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <ul class="about-me-role-list">
+            <li class="about-me-role-item">
+              <p class="ac-text">Frontend development</p>
+            </li>
+            <li class="about-me-role-item">
+              <p class="ac-text">HeadlessCMS,Wordpress</p>
+            </li>
+            <li class="about-me-role-item">
+              <p class="ac-text">Blender(enjoy)</p>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger" aria-label="education button acc">
+            EDUCATION
+            <span class="svg-wrap">
+              <svg class="icon" width="20" height="20">
+                <use href="/js_106_Lubarskiyk/assets/icons-CjiVfnSs.svg#icon-up"></use>
+              </svg>
+            </span>
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <ul class="about-me-education-list">
+            <li class="about-me-education-item">
+              <p class="ac-text">
+                2018 - 2019 / Frontend Development Diploma, GoIT IT School, New York
+              </p>
+            </li>
+            <li class="about-me-education-item">
+              <p class="ac-text">
+                2019 - 2020 / Advanced Web Development Certificate, GoIT IT School, New York
+              </p>
+            </li>
+            <li class="about-me-education-item">
+              <p class="ac-text">2020 - 2022 / Advanced Blender Animation Techniques, Udemy</p>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+
+    <div class="about-container-swiper">
+      <div class="about-me-swiper swiper">
+        <ul id="swpr" class="aboutme-skills-list swiper-wrapper">
+          <li class="aboutme-skills-item swiper-slide">
+            <p class="aboutme-skills-text">HTML/CSS</p>
+          </li>
+          <li class="aboutme-skills-item swiper-slide">
+            <p class="aboutme-skills-text">JavaScript</p>
+          </li>
+          <li class="aboutme-skills-item swiper-slide">
+            <p class="aboutme-skills-text">React</p>
+          </li>
+          <li class="aboutme-skills-item swiper-slide">
+            <p class="aboutme-skills-text">Node. js</p>
+          </li>
+          <li class="aboutme-skills-item swiper-slide">
+            <p class="aboutme-skills-text">React Native</p>
+          </li>
+          <li class="aboutme-skills-item swiper-slide">
+            <p class="aboutme-skills-text">Soft skills</p>
+          </li>
+        </ul>
+      </div>
+      <div class="swiper-button-wrap">
+        <button type="button" class="aboutme-swiper-btn" aria-label="aboutme swiper button">
+          <svg class="reviews-icon">
+            <use href="/js_106_Lubarskiyk/assets/icons-CjiVfnSs.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="benefits" id="benefits-section">
+  <div class="container benefits-container">
+    <div class="benefits-title-box">
+      <h2 class="benefits-title">Benefits of working with me</h2>
+    </div>
+    <div class="benefits-box">
+      <ul class="benefits-list">
+        <li class="benefits-list-item">
+          <div class="benefits-icon-box">
+            <svg class="benefits-icon" width="24" height="24">
+              <use href="/js_106_Lubarskiyk/assets/icons-CjiVfnSs.svg#icon-user"></use>
+            </svg>
+          </div>
+          <div>
+            <h2 class="benefits-list-title">Expertise</h2>
+            <p class="benefits-list-text">
+              As a highly experienced developer, I have deep knowledge of programming and website
+              development.
+            </p>
+          </div>
+        </li>
+        <li class="benefits-list-item">
+          <div class="benefits-icon-box">
+            <svg class="benefits-icon" width="24" height="24">
+              <use href="/js_106_Lubarskiyk/assets/icons-CjiVfnSs.svg#icon-message"></use>
+            </svg>
+          </div>
+          <div>
+            <h2 class="benefits-list-title">Communication</h2>
+            <p class="benefits-list-text">
+              Understanding your needs and wants is my priority and I am always open to discussions
+              and corrections.
+            </p>
+          </div>
+        </li>
+        <li class="benefits-list-item">
+          <div class="benefits-icon-box">
+            <svg class="benefits-icon" width="24" height="24">
+              <use href="/js_106_Lubarskiyk/assets/icons-CjiVfnSs.svg#icon-brush"></use>
+            </svg>
+          </div>
+          <div>
+            <h2 class="benefits-list-title">Art</h2>
+            <p class="benefits-list-text">
+              Thanks to my creative nature, I am ready to accept challenges and help you bring your
+              ideas to life.
+            </p>
+          </div>
+        </li>
+        <li class="benefits-list-item">
+          <div class="benefits-icon-box">
+            <svg class="benefits-icon" width="24" height="24">
+              <use href="/js_106_Lubarskiyk/assets/icons-CjiVfnSs.svg#icon-hourglass"></use>
+            </svg>
+          </div>
+          <div>
+            <h2 class="benefits-list-title">Urgent execution</h2>
+            <p class="benefits-list-text">
+              I understand how important time is to you. Ready to work quickly and efficiently,
+              without reducing the quality of work.
+            </p>
+          </div>
+        </li>
+      </ul>
+      <a class="benefits-link" href="#work-together" aria-label="go to section work together"
+      >Order the project</a
+      >
+    </div>
+  </div>
+</section>
+
+      <section class="section projects" id="projects-section">
+  <div class="container">
+    <h2 class="proj-title">projects</h2>
+    <div class="swiper-container">
+      <ul class="swiper-wrapper proj-swiper-wrap" id="swiper-wrapper"></ul>
+    </div>
+  </div>
+  <div class="proj-btn-wrap">
+    <div class="proj-nav-btn proj-btn-prev">
+      <svg class="proj-arrow-icon">
+        <use href="/js_106_Lubarskiyk/assets/icons-CjiVfnSs.svg#icon-arrow-left"></use>
+      </svg>
+    </div>
+    <div class="proj-nav-btn proj-btn-next">
+      <svg class="proj-arrow-icon">
+        <use href="/js_106_Lubarskiyk/assets/icons-CjiVfnSs.svg#icon-arrow-right"></use>
+      </svg>
+    </div>
+  </div>
+</section>
+
+
+      <section class="faq-container container" id="faq-section">
+  <h2 class="faq-title">faq</h2>
+  <ul class="accordion-container-faq js-accordion-container-faq"></ul>
+</section>
+
+      <section class="covers">
+  <div class="container cover-container">
+    <h2 class="visually-hidden">title</h2>
+    <div class="wrap">
+      <ul class="line line-one">
+        <li class="cover-list"></li>
+      </ul>
+      <ul class="line line-two">
+        <li class="cover-list"></li>
+        <li class="cover-list"></li>
+      </ul>
+      <ul class="line line-three">
+        <li class="cover-list"></li>
+        <li class="cover-list"></li>
+        <li class="cover-list"></li>
+      </ul>
+      <ul class="line line-four">
+        <li class="cover-list"></li>
+        <li class="cover-list"></li>
+        <li class="cover-list"></li>
+      </ul>
+
+      <ul class="line line-five">
+        <li class="cover-list"></li>
+      </ul>
+    </div>
+    <svg
+      class="background-svg"
+      width="1872"
+      height="1408"
+      viewBox="0 0 1872 1408"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g filter="url(#filter0_f_244_357)">
+        <circle class="circleColor" cx="347" cy="545" r="175" fill="#ED3B44" fill-opacity="0.6" />
+      </g>
+      <g filter="url(#filter1_f_244_357)">
+        <circle class="circleColor" cx="775" cy="347" r="175" fill="#ED3B44" fill-opacity="0.6" />
+      </g>
+      <g filter="url(#filter2_f_244_357)">
+        <circle class="circleColor" cx="1525" cy="1061" r="175" fill="#ED3B44" fill-opacity="0.6" />
+      </g>
+      <defs>
+        <filter
+          id="filter0_f_244_357"
+          x="0"
+          y="198"
+          width="694"
+          height="694"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+          <feGaussianBlur stdDeviation="86" result="effect1_foregroundBlur_244_357" />
+        </filter>
+        <filter
+          id="filter1_f_244_357"
+          x="428"
+          y="0"
+          width="694"
+          height="694"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+          <feGaussianBlur stdDeviation="86" result="effect1_foregroundBlur_244_357" />
+        </filter>
+        <filter
+          id="filter2_f_244_357"
+          x="1178"
+          y="714"
+          width="694"
+          height="694"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+          <feGaussianBlur stdDeviation="86" result="effect1_foregroundBlur_244_357" />
+        </filter>
+      </defs>
+    </svg>
+  </div>
+</section>
+
+      <section class="reviews">
+  <div class="container">
+    <h2 class="reviews-title">Reviews</h2>
+
+    <div class="reviews-swiper">
+      <ul class="reviews-list swiper-wrapper"></ul>
+
+      <div class="reviews-swiper-arrows-container">
+        <button
+          type="button"
+          class="reviews-swiper-button reviews-swiper-button-left"
+          aria-label="Go to the previous review"
+        >
+          <svg class="reviews-icon">
+            <use href="/js_106_Lubarskiyk/assets/icons-CjiVfnSs.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="reviews-swiper-button reviews-swiper-button-right"
+          aria-label="Go to the next review"
+        >
+          <svg class="reviews-icon">
+            <use href="/js_106_Lubarskiyk/assets/icons-CjiVfnSs.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer id="work-together" class="footer">
+  <div class="container">
+    <h2 class="footer-title">
+      <span class="js-footer-logo"></span>
+      Let’s <span class="footer-accent-text">work</span>together
+    </h2>
+
+    <form class="js-footer-form footer-contacts-form" name="contact-us" autocomplete="off">
+      <div class="contacts-form-field">
+        <input
+          type="email"
+          name="emailContact"
+          class="contacts-form-inp input"
+          id="email"
+          autocomplete="on"
+          required
+          placeholder=" "
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+        /><label for="email" class="contacts-form-label"> clients@gmail.com</label>
+        <span class="valid-notify">Succes!</span>
+        <span class="invalid-notify">Invalid email, try again</span>
+      </div>
+
+      <div class="contacts-form-field">
+        <input
+          type="text"
+          name="comment"
+          id="Comment"
+          class="contacts-form-inp contacts-form-textarea"
+          placeholder="Text us"
+          required
+        />
+        <label for="Comment" class="contacts-form-label textarea">comments</label>
+      </div>
+
+      <div class="spinner-wrap">
+        <button class="contacts-form-btn js-btn-footer" type="submit">Send</button>
+        <div class="loader js-loader-footer"></div>
+      </div>
+    </form>
+
+    <ul class="footer-contacts-list">
+      <li class="footer-contacts-item">
+        <a href="mailto:lloydjefferson@gmail.com" class="footer-contacts-link"
+        >lloydjefferson@gmail.com</a
+        >
+      </li>
+      <li class="footer-contacts-item">
+        <a href="tel:+3801111111111" class="footer-contacts-link">+380 11 1111 11 11</a>
+      </li>
+    </ul>
+  </div>
+
+  <button
+    id="scroll-to-header-btn"
+    class="scroll-to-header-btn"
+    aria-label="Go to the Header section"
+  >
+    <svg class="scroll-icon">
+      <use href="/js_106_Lubarskiyk/assets/icons-CjiVfnSs.svg#icon-up"></use>
+    </svg>
+  </button>
+</footer>
+
+    <div class="backdrop-order-prj js-backdrop-order is-hidden-modal" data-modal>
+  <div class="modal-order-prj">
+    <button
+      aria-label="Close Order"
+      class="modal-btn close-mob-modal js-modal-close-btn"
+      type="button"
+      data-modal-close
+    >
+      <svg class="modal-icon" width="22" height="22">
+        <use href="/js_106_Lubarskiyk/assets/icons-CjiVfnSs.svg#icon-modal-close-icon"></use>
+      </svg>
+    </button>
+
+    <h2 class="footer-title">
+      <picture>
+        <source
+          srcset="data:image/webp;base64,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 1x, /js_106_Lubarskiyk/assets/logo@2x-Bb889Qlt.webp 2x"
+          media="(min-width: 1440px)" />
+        <source
+          srcset="data:image/webp;base64,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 1x, /js_106_Lubarskiyk/assets/logo@2x-Bb889Qlt.webp 2x"
+          media="(min-width: 768px)" />
+        <source
+          srcset="data:image/webp;base64,UklGRlIFAABXRUJQVlA4WAoAAAAwAAAAKwAAKwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZBTFBIjAAAAAFfQCBAGWSBHvBIRITgjrsBnNbatjZvubIef98FaAOuZBihnhlHiI2LYvrHS9K+ti6i/xMAoHD35ZdaPYmw8OSPm2RIlT+3AawkMQtYjA5EwNCSa0nNG5yiyZl6nE/AUeRf3OdoHudjc1o6p3bk5ETA0JKwGC1gyMgAUH9rAoBwf/kkQxCX4BtllAAAVlA4INACAACwDgCdASosACwAPjEWikOiISETnAQAIAMEsYBUk8uoYg9eW26u4l3h17QXs5j68zVki9sBWhmc/6P/6PuCfqx/qPtl78X7Y+yak7OPA64f7Y2TX2qj2os7PzfLMJjz3IKePygFt6dTW4TjtdQjHOaCxxbKnCfKtqID45Qb87IA/v/OSj89jvdZPyNykZzpe12ECPX5YqQxbGkakKGB9UFIrvfvBNQ5D3TMro1lo2wy3Rj2Z9WM4bZlFZCX5p97oIIQZ6QJ0fuqhJ48jVjVHQWE+S+cn0eTUayXgTr2BamOGIS2GVAbLavP+q6eQdOttXTRASIePU8VfRxJSvUM2AGSrrjrwkknT24Lu7xOLWoJOYtKOHUqq/4lQzMfTKZVJpHGQadGo3LqvVazhFMDuEa/e74mMje3bs1rGmOs2Bxz0NItTED/AykM4XQn5RZXrDWlOaF6kPyPuymdGlKOac3kx3D5V/G0HzxZcrEoHnusTa7yGOui3gw//0sPZEB0s8iwYaM9TP+VNwqBb0/eMzqqC4R2+v5j/7H5h6klQ9DnyseEXfyx6djNIe72Fy4mQDfX/D2IKk1T+SIuv/nZjcpDqukNlysHwLQL9A3u3yBIQIblrXvEAIgYuecN3/FXAzY/8uT9OJF+GMx8KWylMN9/VXuE3uME/SRth6t0zouj0fWffKI3C5o9yLrBb6d8e/vsDet5StZ7Brc/3BeEWUxcX+PWmJbfy7Bak6h8tbjJuAn4pegJ4Caz/UZurjIAUmx2x3veISbyu5xRRp4FE+p6j5xN5eCHTQmG7RlXk+4uraW93IYTxld6q4PNorAX//6TT5JCzqw7nXTmNHpxnFxeiIs2IMTzrSCyNWjAhRnWYGAs9Esx66QfcNCrF4VnU++c6WjOStuIrkRfU7uZSPjsj6d++eDVP/HaCmNpVZu5LLqndUwTdxWAJgaeQ/cAAAA= 1x, data:image/webp;base64,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 2x"
+          media="(min-width: 375px)" />
+        <source
+          srcset="data:image/webp;base64,UklGRlIFAABXRUJQVlA4WAoAAAAwAAAAKwAAKwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZBTFBIjAAAAAFfQCBAGWSBHvBIRITgjrsBnNbatjZvubIef98FaAOuZBihnhlHiI2LYvrHS9K+ti6i/xMAoHD35ZdaPYmw8OSPm2RIlT+3AawkMQtYjA5EwNCSa0nNG5yiyZl6nE/AUeRf3OdoHudjc1o6p3bk5ETA0JKwGC1gyMgAUH9rAoBwf/kkQxCX4BtllAAAVlA4INACAACwDgCdASosACwAPjEWikOiISETnAQAIAMEsYBUk8uoYg9eW26u4l3h17QXs5j68zVki9sBWhmc/6P/6PuCfqx/qPtl78X7Y+yak7OPA64f7Y2TX2qj2os7PzfLMJjz3IKePygFt6dTW4TjtdQjHOaCxxbKnCfKtqID45Qb87IA/v/OSj89jvdZPyNykZzpe12ECPX5YqQxbGkakKGB9UFIrvfvBNQ5D3TMro1lo2wy3Rj2Z9WM4bZlFZCX5p97oIIQZ6QJ0fuqhJ48jVjVHQWE+S+cn0eTUayXgTr2BamOGIS2GVAbLavP+q6eQdOttXTRASIePU8VfRxJSvUM2AGSrrjrwkknT24Lu7xOLWoJOYtKOHUqq/4lQzMfTKZVJpHGQadGo3LqvVazhFMDuEa/e74mMje3bs1rGmOs2Bxz0NItTED/AykM4XQn5RZXrDWlOaF6kPyPuymdGlKOac3kx3D5V/G0HzxZcrEoHnusTa7yGOui3gw//0sPZEB0s8iwYaM9TP+VNwqBb0/eMzqqC4R2+v5j/7H5h6klQ9DnyseEXfyx6djNIe72Fy4mQDfX/D2IKk1T+SIuv/nZjcpDqukNlysHwLQL9A3u3yBIQIblrXvEAIgYuecN3/FXAzY/8uT9OJF+GMx8KWylMN9/VXuE3uME/SRth6t0zouj0fWffKI3C5o9yLrBb6d8e/vsDet5StZ7Brc/3BeEWUxcX+PWmJbfy7Bak6h8tbjJuAn4pegJ4Caz/UZurjIAUmx2x3veISbyu5xRRp4FE+p6j5xN5eCHTQmG7RlXk+4uraW93IYTxld6q4PNorAX//6TT5JCzqw7nXTmNHpxnFxeiIs2IMTzrSCyNWjAhRnWYGAs9Esx66QfcNCrF4VnU++c6WjOStuIrkRfU7uZSPjsj6d++eDVP/HaCmNpVZu5LLqndUwTdxWAJgaeQ/cAAAA= 1x, data:image/webp;base64,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 2x"
+          media="(max-width: 375px)" />
+        <img loading="lazy" src="data:image/webp;base64,UklGRlIFAABXRUJQVlA4WAoAAAAwAAAAKwAAKwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZBTFBIjAAAAAFfQCBAGWSBHvBIRITgjrsBnNbatjZvubIef98FaAOuZBihnhlHiI2LYvrHS9K+ti6i/xMAoHD35ZdaPYmw8OSPm2RIlT+3AawkMQtYjA5EwNCSa0nNG5yiyZl6nE/AUeRf3OdoHudjc1o6p3bk5ETA0JKwGC1gyMgAUH9rAoBwf/kkQxCX4BtllAAAVlA4INACAACwDgCdASosACwAPjEWikOiISETnAQAIAMEsYBUk8uoYg9eW26u4l3h17QXs5j68zVki9sBWhmc/6P/6PuCfqx/qPtl78X7Y+yak7OPA64f7Y2TX2qj2os7PzfLMJjz3IKePygFt6dTW4TjtdQjHOaCxxbKnCfKtqID45Qb87IA/v/OSj89jvdZPyNykZzpe12ECPX5YqQxbGkakKGB9UFIrvfvBNQ5D3TMro1lo2wy3Rj2Z9WM4bZlFZCX5p97oIIQZ6QJ0fuqhJ48jVjVHQWE+S+cn0eTUayXgTr2BamOGIS2GVAbLavP+q6eQdOttXTRASIePU8VfRxJSvUM2AGSrrjrwkknT24Lu7xOLWoJOYtKOHUqq/4lQzMfTKZVJpHGQadGo3LqvVazhFMDuEa/e74mMje3bs1rGmOs2Bxz0NItTED/AykM4XQn5RZXrDWlOaF6kPyPuymdGlKOac3kx3D5V/G0HzxZcrEoHnusTa7yGOui3gw//0sPZEB0s8iwYaM9TP+VNwqBb0/eMzqqC4R2+v5j/7H5h6klQ9DnyseEXfyx6djNIe72Fy4mQDfX/D2IKk1T+SIuv/nZjcpDqukNlysHwLQL9A3u3yBIQIblrXvEAIgYuecN3/FXAzY/8uT9OJF+GMx8KWylMN9/VXuE3uME/SRth6t0zouj0fWffKI3C5o9yLrBb6d8e/vsDet5StZ7Brc/3BeEWUxcX+PWmJbfy7Bak6h8tbjJuAn4pegJ4Caz/UZurjIAUmx2x3veISbyu5xRRp4FE+p6j5xN5eCHTQmG7RlXk+4uraW93IYTxld6q4PNorAX//6TT5JCzqw7nXTmNHpxnFxeiIs2IMTzrSCyNWjAhRnWYGAs9Esx66QfcNCrF4VnU++c6WjOStuIrkRfU7uZSPjsj6d++eDVP/HaCmNpVZu5LLqndUwTdxWAJgaeQ/cAAAA=" alt="logo"
+      /></picture>
+      Let’s <span class="footer-accent-text">work</span>together
+    </h2>
+
+    <form class="js-modal-form footer-contacts-form" name="contact-us" autocomplete="off">
+      <div class="contacts-form-field">
+        <input
+          type="email"
+          name="emailContact"
+          class="contacts-form-inp input"
+          id="emailModal"
+          autocomplete="on"
+          required
+          placeholder=" "
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+        /><label for="emailModal" class="contacts-form-label"> clients@gmail.com</label>
+        <span class="valid-notify">Succes!</span>
+        <span class="invalid-notify">Invalid email, try again</span>
+      </div>
+
+      <div class="contacts-form-field">
+        <input
+          type="text"
+          name="comment"
+          id="CommentModal"
+          class="contacts-form-inp contacts-form-textarea"
+          placeholder="Text us"
+          required
+        />
+        <label for="CommentModal" class="contacts-form-label textarea">comments</label>
+      </div>
+
+      <div class="spinner-wrap js-spinner-wrap">
+        <button class="contacts-form-btn js-btn-modal" type="submit">Send</button>
+        <div class="loader js-loader-modal"></div>
+      </div>
+    </form>
+  </div>
+</div>
+
+  </body>
+</html>
